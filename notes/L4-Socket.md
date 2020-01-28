@@ -184,7 +184,7 @@ Preventing Deadlock!!
 
 Like we just mentioned when we were learning how to send a message with a socket, it is blocked while sending.
 
-<img src="L4-Socket.assets/image-20200128111736644.png" alt="image-20200128111736644" style="zoom:67%;" />
+<img src="./L4-Socket.assets/image-20200128111736644.png" alt="image-20200128111736644" style="zoom:67%;" />
 
 This is a [link](http://florin.bjdean.id.au/docs/omnimark/omni55/docs/html/concept/717.htm) I found regardidng this topic. U might found it useful.
 
