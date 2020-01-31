@@ -17,18 +17,14 @@ Date:   2020.1.28
 void sendResponse(int socket_id, int is_Good)
 {
     char *request = (char *)malloc(4 * sizeof(char));
-    if (is_Good)
-    {
+    if (is_Good){
         request = "200";
-    }
-    else
-    {
+    } else{
         request = "404";
     }
 
     int r;
-    if ((r = send(socket_id, request, sizeof(request), 0) == 0))
-    {
+    if ((r = send(socket_id, request, sizeof(request), 0) == 0)) {
         perror("Send Connction Request Failed!");
     }
 }
