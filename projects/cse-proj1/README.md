@@ -86,5 +86,5 @@ c++11
 
 ##### Client:
 
-<img src="./README.assets/image-20200203112313795.png">
+![image-20200203114255690](/Users/isabella/Desktop/MOOCS/UCSD_CSE124/github/UCSD_CSE124/projects/cse-proj1/README.assets/image-20200203114255690.png)
 
