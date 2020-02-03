@@ -1,0 +1,103 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+    {
+        "label": "build",
+        "type": "process",
+        "command": "g++",
+        "args": [
+            "-std=c++11",
+            "-ggdb",
+            "-Wall",
+            "-Wextra",
+            "-pedantic",
+            "-Werror",
+            "-Wnon-virtual-dtor",
+            "HttpdServer.cc",
+            "client.cc",
+            "logger.cc",
+            "server-main.cpp",
+            "client-main.cpp",
+        ],
+        "group": "build",
+        "presentation": {
+            "reveal": "silent"
+        },
+        "problemMatcher": "$msCompile"
+    },
+    {
+        "label": "build-server",
+        "type": "process",
+        "command": "g++",
+        "args": [
+            "-std=c++11",
+            "-ggdb",
+            "-Wall",
+            "-Wextra",
+            "-pedantic",
+            "-Werror",
+            "-Wnon-virtual-dtor",
+            "-o httpd",
+            "server-main.o logger.o HttpdServer.o"
+        ],
+        "group": "build",
+        "presentation": {
+            "reveal": "silent"
+        },
+        "problemMatcher": "$msCompile"
+    },
+    {
+        "label": "build-client",
+        "type": "process",
+        "command": "g++",
+        "args": [
+            "-std=c++11",
+            "-ggdb",
+            "-Wall",
+            "-Wextra",
+            "-pedantic",
+            "-Werror",
+            "-Wnon-virtual-dtor",
+            "-o client",
+            "client.o client-main.o"
+        ],
+        "group": "build",
+        "presentation": {
+            "reveal": "silent"
+        },
+        "problemMatcher": "$msCompile"
+    },
+    {
+        "type": "shell",
+        "label": "run",
+        "command": "./httpd",
+        "args": [
+            "-myconfig.ini",
+        ],
+        "options": {
+            "cwd": "/usr/bin"
+        },
+        "problemMatcher": [
+            "$gcc"
+        ],
+        "group": "build"
+    }, 
+    {
+        "type": "shell",
+        "label": "run",
+        "command": "./client",
+        "args": [
+            "-myconfig.ini",
+        ],
+        "options": {
+            "cwd": "/usr/bin"
+        },
+        "problemMatcher": [
+            "$gcc"
+        ],
+        "group": "build"
+    }
+    ]
+}
