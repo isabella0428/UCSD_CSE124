@@ -71,7 +71,7 @@ c++11
 
 ```
 1. Enter progrom folder
-     cd src
+	 cd src
 1. build the files
 	 make
 2. In one terminal, run the server code
@@ -82,9 +82,39 @@ c++11
 
 ##### Server:
 
-<img src="./README.assets/image-20200203112249799.png">
+```
+(base) ➜  src git:(master) ✗ ./httpd myconfig.ini 
+[11:41:23.268] [info] [thread 28199912] Web server enabled
+[11:41:23.271] [info] [thread 28199912] Launching web server
+[11:41:23.271] [info] [thread 28199912] Port: 8080
+[11:41:23.271] [info] [thread 28199912] doc_root: ../
+[11:41:23.271] [info] [thread 28199912] Socket created
+[11:41:23.272] [info] [thread 28199912] Socket Binded
+[11:41:23.272] [info] [thread 28199912] Start Listening
+[11:41:27.018] [info] [thread 28199968] Start Processing Request
+[11:41:27.038] [info] [thread 28199968] Finish Transmitting File
+[11:42:02.612] [info] [thread 28200534] Start Processing Request
+```
 
 ##### Client:
 
-![image-20200203114255690](/Users/isabella/Desktop/MOOCS/UCSD_CSE124/github/UCSD_CSE124/projects/cse-proj1/README.assets/image-20200203114255690.png)
+```
+(base) ➜  src git:(master) ✗ ./client   
+Client side
+Socket Created
+Connected to Server
+Start receiving response
+----------------------
+Response received: 
+HTTP/1.1 200 OK
+Server: Myserver 1.0
+Filename: UCSD_Seal.png
+Last modified: Mon, 03 Feb 20 11:42:02 +0800
+Content-Length: 637155
+Content-Type: image/png
+
+File saved to: /Users/isabella/Desktop/MOOCS/UCSD_CSE124/project/cse-proj1/download/UCSD_Seal.png
+```
+
+
 
