@@ -10,7 +10,7 @@ In this project, I built a cloud-based file storage system called SurfStore. Sur
 
 #### File Storage
 
-<img src="CSE-124 Project2 SurfStore.assets/image-20200206125840647.png">
+<img src="README.assets/image-20200206125840647.png">
 
 In the cloud, I split the file into fixed-sized chunks. Files are stored in these way in the cloud, not as a whole. 
 
@@ -34,7 +34,7 @@ Each file/filename is associated with a *version*, which is a monotonically incr
 
 For example, imagine that Tahani wants to update a spreadsheet file that tracks conference room reservations. Ideally, they would perform the following actions:
 
-<img src="CSE-124 Project2 SurfStore.assets/image-20200206130643929.png">
+<img src="README.assets/image-20200206130643929.png">
 
 
 
